@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans
+        				 http://www.springframework.org/schema/beans/spring-beans.xsd
+        				 http://camel.apache.org/schema/cxf
+       					 http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       					 http://cxf.apache.org/jaxrs
+        				 http://cxf.apache.org/schemas/jaxrs.xsd
+       					 http://camel.apache.org/schema/spring
+        				 http://camel.apache.org/schema/spring/camel-spring.xsd
+       					 http://www.springframework.org/schema/context 
+       					 http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- 
+	<bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="brokerURL" value="tcp://127.0.0.1:61616" />
+	</bean>	
+ -->
+	<!-- <camel:camelContext id="camelContext"> -->
+	<bean id="districtAggregationStrategy" class="com.distribuida.process.DistrictAggregationStrategy"/>
+	<bean id="districtsAggregationStrategy" class="com.distribuida.process.DistrictsAggregationStrategy"/>
+	
+	 
+	
+	<camel:camelContext id="camelContext">
+		<camel:package>com.distribuida.process</camel:package>
+		<camel:template id="camelTemplate"/>
+	</camel:camelContext>
+	 
+</beans>
+

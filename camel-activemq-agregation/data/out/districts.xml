@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<districts>
+    <district name="Pichincha" inhabitants="2"/>
+    <district name="Los Rios" inhabitants="2"/>
+</districts>
